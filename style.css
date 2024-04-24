@@ -5,12 +5,12 @@
   --Dark-Grayish-Red: hsl(0, 6%, 24%);
 }
 *,
-  *::before,
-  *::after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
   max-width: 100%;
   max-height: 100vh;
@@ -18,7 +18,7 @@ body {
   overflow: hidden;
 }
 main {
-  display: flex;  
+  display: flex;
 }
 #left {
   max-width: 60%;
@@ -62,38 +62,42 @@ p {
 #email-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  min-width: 50%;
+  max-width: 50%;
 }
 #email-input {
   display: flex;
-  align-items: center;
   position: relative;
 }
 #email {
+  min-width: 100%;
+  max-width: 100%;
   border: 2px solid var(--Desaturated-Red);
   color: var(--Desaturated-Red);
   border-radius: 2em;
   padding: 1em;
   padding-left: 2em;
-  padding-right: 10em;
+  outline: none;
 }
-#email-container button {
+#error-img {
   position: absolute;
-  right: 55%;
+  right: 18%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
+  display: none;
+}
+button {
+  position: absolute;
+  right: 0;
   background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   border: none;
   border-radius: 2em;
   cursor: pointer;
   padding: 0.7em 2em;
+  height: 100%;
 }
 #email-container button:hover {
-  opacity: 90%;
-}
-#email-container button img {
-  width: 15px;
-  height: auto;
+  opacity: 80%;
 }
 b {
   color: var(--Soft-Red);
